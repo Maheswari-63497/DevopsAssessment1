@@ -6,7 +6,7 @@ pipeline {
   stages {
      stage("maven build"){
  steps {
-        sh 'mvn clean package'
+        bat 'mvn clean package'
              /* mavenGoals="clean test"   
              withMaven {
       sh "mvn clean verify"
