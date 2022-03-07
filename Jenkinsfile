@@ -5,11 +5,17 @@ pipeline {
   }
   stages {
      stage("maven build"){
-       steps {
+      /* steps {
           mavenGoals="clean test"    
-       }
+       }*/
+       
+          withMaven {
+      sh "mvn clean verify"
+    } 
      }
   }
+  
+
    /* stage ('Deploy') {
       steps {
         script {
