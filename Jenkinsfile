@@ -5,8 +5,10 @@ pipeline {
   }
   stages {
      stage("maven build"){
-            mavenGoals="clean test"         
-        }
+       steps {
+          mavenGoals="clean test"    
+       }
+     }
   }
    /* stage ('Deploy') {
       steps {
