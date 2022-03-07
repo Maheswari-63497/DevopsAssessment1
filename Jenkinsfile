@@ -4,11 +4,9 @@ pipeline {
     maven 'Maven' 
   }
   stages {
-    stage ('Build') {
-      steps {
-        sh 'mvn clean install'
-      }
-    }
+     stage("maven build"){
+            mavenGoals="clean test"         
+        }
    /* stage ('Deploy') {
       steps {
         script {
