@@ -1,17 +1,20 @@
-/*pipeline {
+pipeline {
   agent any
   tools {
     maven 'Maven' 
   }
   stages {
      stage("maven build"){
-      /* steps {
-          mavenGoals="clean test"    
-       }
-       
-          withMaven {
+ steps {
+        sh 'mvn -B -DskipTests clean package'
+             /* mavenGoals="clean test"   
+             withMaven {
       sh "mvn clean verify"
     } 
+    */
+       }
+       
+          
      }
   }
   
@@ -23,9 +26,9 @@
         }
       }
     }
-}*/
+}
 
-pipeline {
+/*pipeline {
   agent any
   tools {
     maven "Maven"
@@ -53,4 +56,4 @@ post {
       )
     }
   }
-}
+}*/
