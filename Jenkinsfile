@@ -6,7 +6,7 @@ pipeline {
   stages {
      stage("maven build"){
  steps {
-        sh 'mvn -B -DskipTests clean package'
+        sh 'mvn clean package'
              /* mavenGoals="clean test"   
              withMaven {
       sh "mvn clean verify"
